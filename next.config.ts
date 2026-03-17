@@ -1,4 +1,8 @@
 import type { NextConfig } from "next";
+import { dirname } from "node:path";
+import { fileURLToPath } from "node:url";
+
+const projectRoot = dirname(fileURLToPath(import.meta.url));
 
 const nextConfig: NextConfig = {
   // Security Headers für besseren Schutz
@@ -43,7 +47,10 @@ const nextConfig: NextConfig = {
   compress: true,
   poweredByHeader: false, // Entfernt X-Powered-By Header für Sicherheit
   reactStrictMode: true,
-  swcMinify: true,
+  turbopack: {
+    // Verhindert, dass Turbopack das falsche Workspace-Root verwendet.
+    root: projectRoot,
+  },
 };
 
 export default nextConfig;

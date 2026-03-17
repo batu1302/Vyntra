@@ -1,33 +1,57 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { useEffect } from "react";
+import { motion, useMotionValue, useReducedMotion, useSpring } from "framer-motion";
 
 export default function MouseGlow() {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const shouldReduceMotion = useReducedMotion();
+  const mouseX = useMotionValue(-9999);
+  const mouseY = useMotionValue(-9999);
+  const smoothX = useSpring(mouseX, { stiffness: 60, damping: 25, mass: 0.3 });
+  const smoothY = useSpring(mouseY, { stiffness: 60, damping: 25, mass: 0.3 });
 
   useEffect(() => {
-    const updateMousePosition = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
+    if (shouldReduceMotion) {
+      return;
+    }
+
+    let frameId: number | null = null;
+    let nextX = -9999;
+    let nextY = -9999;
+
+    const flushPosition = () => {
+      mouseX.set(nextX);
+      mouseY.set(nextY);
+      frameId = null;
     };
 
-    window.addEventListener("mousemove", updateMousePosition);
-    return () => window.removeEventListener("mousemove", updateMousePosition);
-  }, []);
+    const updateMousePosition = (event: MouseEvent) => {
+      nextX = event.clientX - 200;
+      nextY = event.clientY - 200;
+
+      if (frameId === null) {
+        frameId = requestAnimationFrame(flushPosition);
+      }
+    };
+
+    window.addEventListener("mousemove", updateMousePosition, { passive: true });
+
+    return () => {
+      window.removeEventListener("mousemove", updateMousePosition);
+      if (frameId !== null) {
+        cancelAnimationFrame(frameId);
+      }
+    };
+  }, [mouseX, mouseY, shouldReduceMotion]);
+
+  if (shouldReduceMotion) {
+    return null;
+  }
 
   return (
     <motion.div
       className="fixed pointer-events-none z-0"
-      animate={{
-        x: mousePosition.x - 200,
-        y: mousePosition.y - 200,
-      }}
-      transition={{
-        type: "spring",
-        stiffness: 30,
-        damping: 15,
-        mass: 0.3,
-      }}
+      style={{ x: smoothX, y: smoothY }}
     >
       <motion.div
         animate={{
