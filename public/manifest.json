@@ -1,0 +1,18 @@
+{
+  "name": "Vyntra - Moderne Web-Lösungen",
+  "short_name": "Vyntra",
+  "description": "Professionelles Webdesign und Webentwicklung für Ihr Unternehmen",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4f46e5",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}
+
