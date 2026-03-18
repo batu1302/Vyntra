@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
 import ScrollToTop from "@/components/ScrollToTop";
+import CookieBanner from "@/components/CookieBanner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -195,6 +196,7 @@ export default function RootLayout({
             </a>
             <ScrollToTop />
             {children}
+            <CookieBanner />
           </ThemeProvider>
         </ErrorBoundary>
       </body>

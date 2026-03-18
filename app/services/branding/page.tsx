@@ -42,7 +42,7 @@ export default function BrandingPage() {
         />
 
         {/* Content Section */}
-        <section className="py-24 bg-white">
+        <section className="py-24 bg-white dark:bg-[#0a0a0a] transition-colors duration-300">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
               {features.map((feature, index) => {
@@ -50,17 +50,17 @@ export default function BrandingPage() {
                 return (
                   <div
                     key={index}
-                    className="p-8 rounded-2xl bg-white border border-gray-200 hover:border-[#00CED1]/50 transition-all duration-300"
+                    className="p-8 rounded-2xl bg-white dark:bg-[#111111] border border-gray-200 dark:border-gray-800 hover:border-[#00CED1]/50 transition-all duration-300"
                   >
                     <div className="flex items-start gap-4">
                       <div className="p-3 rounded-xl bg-[#00CED1]/10">
                         <Icon className="w-6 h-6 text-[#00CED1]" />
                       </div>
                       <div>
-                        <h3 className="text-2xl font-bold text-[#1a1a1a] mb-2">
+                        <h3 className="text-2xl font-bold text-[#1a1a1a] dark:text-white mb-2 transition-colors duration-300">
                           {feature.title}
                         </h3>
-                        <p className="text-[#4a4a4a] leading-relaxed">
+                        <p className="text-[#4a4a4a] dark:text-gray-300 leading-relaxed transition-colors duration-300">
                           {feature.description}
                         </p>
                       </div>
@@ -70,15 +70,15 @@ export default function BrandingPage() {
               })}
             </div>
 
-            <div className="bg-[#f5f5f5] rounded-3xl p-8 md:p-12">
-              <h2 className="text-3xl md:text-4xl font-light text-[#1a1a1a] mb-6">
+            <div className="bg-[#f5f5f5] dark:bg-[#111111] rounded-3xl p-8 md:p-12 transition-colors duration-300">
+              <h2 className="text-3xl md:text-4xl font-light text-[#1a1a1a] dark:text-white mb-6 transition-colors duration-300">
                 Ihre <span className="text-[#00CED1]">Marke</span> ist mehr als ein Logo
               </h2>
-              <p className="text-lg text-[#4a4a4a] leading-relaxed mb-6">
+              <p className="text-lg text-[#4a4a4a] dark:text-gray-300 leading-relaxed mb-6 transition-colors duration-300">
                 Eine starke Marke ist das Fundament für langfristigen Erfolg. Sie kommuniziert Ihre Werte,
                 baut Vertrauen auf und schafft emotionale Verbindungen zu Ihrer Zielgruppe.
               </p>
-              <p className="text-lg text-[#4a4a4a] leading-relaxed">
+              <p className="text-lg text-[#4a4a4a] dark:text-gray-300 leading-relaxed transition-colors duration-300">
                 Wir entwickeln nicht nur schöne Designs, sondern komplette Markenstrategien, die Ihre
                 Positionierung stärken und Ihre Zielgruppe begeistern.
               </p>
@@ -87,12 +87,12 @@ export default function BrandingPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-24 bg-[#f5f5f5]">
+        <section className="py-24 bg-[#f5f5f5] dark:bg-[#050505] transition-colors duration-300">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-4xl md:text-5xl font-light text-[#1a1a1a] mb-6">
+            <h2 className="text-4xl md:text-5xl font-light text-[#1a1a1a] dark:text-white mb-6 transition-colors duration-300">
               Entwickeln Sie Ihre <span className="text-[#00CED1]">Marke</span>
             </h2>
-            <p className="text-xl text-[#4a4a4a] mb-10 max-w-2xl mx-auto">
+            <p className="text-xl text-[#4a4a4a] dark:text-gray-300 mb-10 max-w-2xl mx-auto transition-colors duration-300">
               Lassen Sie uns gemeinsam eine Markenidentität schaffen, die Ihre Vision perfekt widerspiegelt.
             </p>
             <MagneticButton href="/#kontakt" className="text-center">

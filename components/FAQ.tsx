@@ -24,7 +24,7 @@ const faqs: FAQItem[] = [
   },
   {
     question: "Was kostet ein Projekt?",
-    answer: "Maßgeschneiderte Performance-Upgrades starten bereits bei 950€, während ein vollständiges Business-System bei ca. 1.950€ liegt – abgesichert durch unsere Speed-Garantie: Erreichen wir keinen Google-Lighthouse-Score von 90+, erhalten Sie sofort 20% Rabatt auf die gesamte Projektsumme.",
+    answer: "Ihre Investition in ein hochkonvertierendes Performance-Upgrade startet aktuell bei nur 399€ (statt 950€). Ein komplettes, maßgeschneidertes Business-System erhalten Sie für 999€. Der Clou: Sie tragen absolut null Risiko. Durch unsere eiserne Performance-Garantie sichern wir Ihnen einen Google-Lighthouse-Score von mindestens 90+ zu. Verfehlen wir dieses Ziel, arbeiten wir völlig kostenlos weiter – oder Sie erhalten Ihre gesamte Investition sofort zurück.",
   },
   {
     question: "Kann ich die Inhalte später selbst ändern?",
@@ -48,20 +48,20 @@ export default function FAQ() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: index * 0.1 }}
-          className="rounded-2xl bg-white border border-gray-200 overflow-hidden hover:border-[#00CED1]/50 transition-colors duration-300"
+          className="rounded-2xl bg-white dark:bg-[#111111] border border-gray-200 dark:border-gray-800 overflow-hidden hover:border-[#00CED1]/50 dark:hover:border-[#00CED1]/50 transition-colors duration-300"
         >
           <button
             onClick={() => toggleFAQ(index)}
             className="w-full px-8 py-6 flex items-center justify-between text-left group"
           >
-            <span className="text-lg md:text-xl font-semibold text-[#1a1a1a] pr-8 group-hover:text-[#00CED1] transition-colors duration-300">
+            <span className="text-lg md:text-xl font-semibold text-[#1a1a1a] dark:text-white pr-8 group-hover:text-[#00CED1] dark:group-hover:text-[#00CED1] transition-colors duration-300">
               {faq.question}
             </span>
             <div className="flex-shrink-0">
               {openIndex === index ? (
                 <Minus className="w-6 h-6 text-[#00CED1]" />
               ) : (
-                <Plus className="w-6 h-6 text-[#6a6a6a] group-hover:text-[#00CED1] transition-colors duration-300" />
+                <Plus className="w-6 h-6 text-[#6a6a6a] dark:text-gray-400 group-hover:text-[#00CED1] transition-colors duration-300" />
               )}
             </div>
           </button>
@@ -75,7 +75,7 @@ export default function FAQ() {
                 transition={{ duration: 0.3 }}
                 className="overflow-hidden"
               >
-                <div className="px-8 pb-6 text-[#4a4a4a] leading-relaxed">
+                <div className="px-8 pb-6 text-[#4a4a4a] dark:text-gray-300 leading-relaxed">
                   {faq.answer}
                 </div>
               </motion.div>

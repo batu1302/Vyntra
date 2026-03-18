@@ -18,12 +18,12 @@ export default function ImpressumPage() {
         <PageHero title="Impressum" />
 
         {/* Content Section */}
-        <section className="py-24 bg-white">
+        <section className="py-24 bg-white dark:bg-[#0a0a0a] transition-colors duration-300">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="prose prose-lg max-w-none">
-              <div className="space-y-8 text-[#4a4a4a] leading-relaxed">
+              <div className="space-y-8 text-[#4a4a4a] dark:text-gray-300 leading-relaxed transition-colors duration-300">
                 <div>
-                  <h2 className="text-2xl font-bold text-[#1a1a1a] mb-4">Angaben gemäß § 5 TMG</h2>
+                  <h2 className="text-2xl font-bold text-[#1a1a1a] dark:text-white mb-4 transition-colors duration-300">Angaben gemäß § 5 TMG</h2>
                   <p>
                     Batuhan Yomralioglu
                     <br />
@@ -34,7 +34,7 @@ export default function ImpressumPage() {
                 </div>
 
                 <div>
-                  <h2 className="text-2xl font-bold text-[#1a1a1a] mb-4">Kontakt</h2>
+                  <h2 className="text-2xl font-bold text-[#1a1a1a] dark:text-white mb-4 transition-colors duration-300">Kontakt</h2>
                   <p>
                     E-Mail:{" "}
                     <a
@@ -55,7 +55,7 @@ export default function ImpressumPage() {
                 </div>
 
                 <div>
-                  <h2 className="text-2xl font-bold text-[#1a1a1a] mb-4">Haftung für Inhalte</h2>
+                  <h2 className="text-2xl font-bold text-[#1a1a1a] dark:text-white mb-4 transition-colors duration-300">Haftung für Inhalte</h2>
                   <p>
                     Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen
                     Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind
@@ -73,7 +73,7 @@ export default function ImpressumPage() {
                 </div>
 
                 <div>
-                  <h2 className="text-2xl font-bold text-[#1a1a1a] mb-4">Haftung für Links</h2>
+                  <h2 className="text-2xl font-bold text-[#1a1a1a] dark:text-white mb-4 transition-colors duration-300">Haftung für Links</h2>
                   <p>
                     Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir
                     keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine
@@ -90,7 +90,7 @@ export default function ImpressumPage() {
                 </div>
 
                 <div>
-                  <h2 className="text-2xl font-bold text-[#1a1a1a] mb-4">Urheberrecht</h2>
+                  <h2 className="text-2xl font-bold text-[#1a1a1a] dark:text-white mb-4 transition-colors duration-300">Urheberrecht</h2>
                   <p>
                     Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten
                     unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung,

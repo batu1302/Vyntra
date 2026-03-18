@@ -45,8 +45,8 @@ export default function Logo({ className = "", variant = "default", animated = t
       >
         <defs>
           <linearGradient id={`v-gradient-${isHovered ? "hover" : "default"}`} x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor={isHovered ? "#818cf8" : "#6366f1"} />
-            <stop offset="100%" stopColor={isHovered ? "#c084fc" : "#a855f7"} />
+            <stop offset="0%" stopColor={isHovered ? "#00A8AB" : "#00CED1"} />
+            <stop offset="100%" stopColor={isHovered ? "#00CED1" : "#00A8AB"} />
           </linearGradient>
           <filter id="glow">
             <feGaussianBlur stdDeviation="3" result="coloredBlur" />
@@ -93,10 +93,9 @@ export default function Logo({ className = "", variant = "default", animated = t
       {/* Typography */}
       <motion.span
         className={`
-          font-light uppercase tracking-[0.2em] text-lg sm:text-xl
-          ${variant === "footer" 
-            ? "text-gray-300" 
-            : "text-[#1a1a1a] dark:text-gray-100"
+          font-bold uppercase tracking-[0.2em] text-lg sm:text-xl
+            ? "text-white" 
+            : "text-[#1a1a1a] dark:text-white"
           }
           transition-colors duration-300
         `}

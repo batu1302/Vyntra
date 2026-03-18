@@ -60,34 +60,38 @@ export default function ContactForm() {
       setIsLoading(true);
       
       try {
-        const response = await fetch('/api/send', {
+        // Formspree – kein eigener Server nötig, funktioniert auf jedem Hosting
+        // WICHTIG: Ersetze "YOUR_FORM_ID" mit deiner Formspree-Form-ID
+        // Anmeldung kostenlos auf https://formspree.io → Neues Formular → ID kopieren
+        const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
+            'Accept': 'application/json',
           },
-          body: JSON.stringify(formData),
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            company: formData.company,
+            message: formData.message,
+          }),
         });
-
-        const data = await response.json();
 
         if (response.ok) {
           setIsSubmitted(true);
-          
-          // Reset nach 5 Sekunden
           setTimeout(() => {
             setFormData({ name: "", email: "", company: "", message: "" });
             setIsSubmitted(false);
           }, 5000);
         } else {
-          // Fehlerbehandlung
           setErrors({ 
-            message: data.error || 'E-Mail konnte nicht gesendet werden. Bitte versuchen Sie es erneut.' 
+            message: 'Nachricht konnte nicht gesendet werden. Bitte versuche es erneut.' 
           });
         }
       } catch (error) {
         console.error('Fehler beim Senden:', error);
         setErrors({ 
-          message: 'Verbindungsfehler. Bitte überprüfen Sie Ihre Internetverbindung.' 
+          message: 'Verbindungsfehler. Bitte überprüfe deine Internetverbindung.' 
         });
       } finally {
         setIsLoading(false);
@@ -109,15 +113,15 @@ export default function ContactForm() {
 
   const inputClasses = (fieldName: string, hasError: boolean) => `
     w-full px-6 py-4 rounded-xl
-    bg-white
+    bg-white dark:bg-[#1a1a1a]
     border-2 transition-all duration-300
-    text-[#1a1a1a]
-    placeholder-[#9a9a9a]
+    text-[#1a1a1a] dark:text-white
+    placeholder-[#9a9a9a] dark:placeholder-[#6a6a6a]
     ${hasError 
       ? "border-red-500 focus:border-red-500" 
       : focusedField === fieldName
         ? "border-[#00CED1] shadow-md shadow-[#00CED1]/20"
-        : "border-gray-300 hover:border-gray-400"
+        : "border-gray-300 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-500"
     }
     focus:outline-none focus:ring-0
   `;
@@ -138,13 +142,13 @@ export default function ContactForm() {
         >
           <CheckCircle className="w-10 h-10 text-green-500" />
         </motion.div>
-        <h3 className="text-3xl font-bold text-[#1a1a1a] mb-4">
+        <h3 className="text-3xl font-bold text-[#1a1a1a] dark:text-white mb-4 transition-colors duration-300">
           Danke, {formData.name}! Batuhan meldet sich innerhalb von 24 Stunden bei dir.
         </h3>
-        <p className="text-[#4a4a4a] mb-2">
+        <p className="text-[#4a4a4a] dark:text-gray-300 mb-2 transition-colors duration-300">
           Deine Nachricht wurde erfolgreich gesendet.
         </p>
-        <p className="text-sm text-[#6a6a6a]">
+        <p className="text-sm text-[#6a6a6a] dark:text-gray-400 transition-colors duration-300">
           📧 Antwort an: {formData.email}
         </p>
       </motion.div>
@@ -156,7 +160,7 @@ export default function ContactForm() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Name */}
         <div>
-          <label htmlFor="name" className="block text-sm font-medium text-[#1a1a1a] mb-2">
+          <label htmlFor="name" className="block text-sm font-medium text-[#1a1a1a] dark:text-gray-200 mb-2 transition-colors duration-300">
             Name *
           </label>
           <input
@@ -184,7 +188,7 @@ export default function ContactForm() {
 
         {/* E-Mail */}
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-[#1a1a1a] mb-2">
+          <label htmlFor="email" className="block text-sm font-medium text-[#1a1a1a] dark:text-gray-200 mb-2 transition-colors duration-300">
             E-Mail *
           </label>
           <input
@@ -213,7 +217,7 @@ export default function ContactForm() {
 
       {/* Unternehmen */}
       <div>
-        <label htmlFor="company" className="block text-sm font-medium text-[#1a1a1a] mb-2">
+        <label htmlFor="company" className="block text-sm font-medium text-[#1a1a1a] dark:text-gray-200 mb-2 transition-colors duration-300">
           Unternehmen (optional)
         </label>
         <input
@@ -231,7 +235,7 @@ export default function ContactForm() {
 
       {/* Nachricht */}
       <div>
-        <label htmlFor="message" className="block text-sm font-medium text-[#1a1a1a] mb-2">
+        <label htmlFor="message" className="block text-sm font-medium text-[#1a1a1a] dark:text-gray-200 mb-2 transition-colors duration-300">
           Nachricht *
         </label>
         <textarea
@@ -284,7 +288,7 @@ export default function ContactForm() {
         )}
       </motion.button>
 
-      <p className="text-sm text-[#6a6a6a]">
+      <p className="text-sm text-[#6a6a6a] dark:text-gray-400 transition-colors duration-300">
         * Pflichtfelder
       </p>
     </form>

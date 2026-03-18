@@ -15,6 +15,7 @@ import AnimatedBackground from "@/components/AnimatedBackground";
 import ParticleSystem from "@/components/ParticleSystem";
 import MagneticButton from "@/components/MagneticButton";
 import ParallaxSection from "@/components/ParallaxSection";
+import Testimonials from "@/components/Testimonials";
 
 export default function Home() {
   return (
@@ -29,8 +30,8 @@ export default function Home() {
       
       <main id="main-content" className="pt-16 relative z-10">
         {/* Hero Section - 2 Spalten */}
-        <Section variant="default" className="min-h-screen py-48 bg-white">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <Section variant="default" className="min-h-screen py-24 lg:py-32 bg-white dark:bg-[#0a0a0a] flex items-center transition-colors duration-300">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center w-full">
             {/* Links: Text & Buttons */}
             <div className="space-y-8">
               <div className="inline-block px-4 py-2 rounded-full bg-[#00CED1]/10 border border-[#00CED1]/30 text-[#00CED1] text-sm font-medium mb-4">
@@ -42,12 +43,12 @@ export default function Home() {
                   Digitale Exzellenz
                 </span>
                 <br />
-                <span className="text-[#1a1a1a] font-extralight">
+                <span className="text-[#1a1a1a] dark:text-white font-extralight transition-colors duration-300">
                   neu definiert
                 </span>
               </h1>
               
-              <p className="text-xl md:text-2xl text-[#4a4a4a] leading-relaxed max-w-xl">
+              <p className="text-xl md:text-2xl text-[#4a4a4a] dark:text-gray-300 leading-relaxed max-w-xl transition-colors duration-300">
                 Wir entwickeln High-Performance Websites, die nicht nur beeindrucken, 
                 sondern messbare Ergebnisse liefern.
               </p>
@@ -76,16 +77,16 @@ export default function Home() {
               {/* Mini Stats */}
               <div className="flex gap-8 pt-8">
                 <div>
-                  <div className="text-4xl font-bold text-[#1a1a1a]">150+</div>
-                  <div className="text-sm text-[#6a6a6a]">Projekte</div>
+                  <div className="text-4xl font-bold text-[#1a1a1a] dark:text-white transition-colors duration-300">38+</div>
+                  <div className="text-sm text-[#6a6a6a] dark:text-gray-400 transition-colors duration-300">Projekte</div>
                 </div>
                 <div>
-                  <div className="text-4xl font-bold text-[#1a1a1a]">5 Jahre</div>
-                  <div className="text-sm text-[#6a6a6a]">Erfahrung</div>
+                  <div className="text-4xl font-bold text-[#1a1a1a] dark:text-white transition-colors duration-300">5 Jahre</div>
+                  <div className="text-sm text-[#6a6a6a] dark:text-gray-400 transition-colors duration-300">Erfahrung</div>
                 </div>
                 <div>
-                  <div className="text-4xl font-bold text-[#1a1a1a]">99%</div>
-                  <div className="text-sm text-[#6a6a6a]">Zufrieden</div>
+                  <div className="text-4xl font-bold text-[#1a1a1a] dark:text-white transition-colors duration-300">99%</div>
+                  <div className="text-sm text-[#6a6a6a] dark:text-gray-400 transition-colors duration-300">Zufrieden</div>
                 </div>
               </div>
             </div>
@@ -103,13 +104,27 @@ export default function Home() {
         </Section>
 
         {/* Expertise - Bento Grid */}
-        <Section id="expertise" variant="default" className="py-48 bg-[#f5f5f5]">
+        <Section id="expertise" variant="default" className="py-24 lg:py-32 bg-[#f5f5f5] dark:bg-[#111111] transition-colors duration-300">
           <ParallaxSection speed={0.3}>
-            <div className="text-center mb-24 space-y-6">
-              <h2 className="text-5xl md:text-7xl font-light tracking-tighter text-[#1a1a1a]">
-                <span className="text-[#00CED1]">Lösungen</span>, die bewegen
+            <div className="text-center mb-24 space-y-6 flex flex-col items-center">
+              <h2 className="text-5xl md:text-7xl font-light tracking-tighter text-[#1a1a1a] dark:text-white transition-colors duration-300 flex items-center justify-center">
+                <span className="text-move-effect group flex items-center">
+                  <span className="text-[#00CED1] group-hover:text-[#20E0E3] transition-colors duration-300">Lösungen</span>
+                  <span className="whitespace-pre">, die </span>
+                  <span className="inline-flex">
+                    {'bewegen'.split('').map((char, i, arr) => (
+                      <span
+                        key={i}
+                        className="letter-wave group-hover:text-[#20E0E3] transition-colors duration-300"
+                        style={{ animationDelay: `${(arr.length - 1 - i) * 0.2}s` }}
+                      >
+                        {char}
+                      </span>
+                    ))}
+                  </span>
+                </span>
               </h2>
-              <p className="text-xl md:text-2xl font-light text-[#4a4a4a] max-w-3xl mx-auto">
+              <p className="text-xl md:text-2xl font-light text-[#4a4a4a] dark:text-gray-300 max-w-3xl mx-auto transition-colors duration-300">
                 Mit modernsten Technologien und bewährten Strategien bringen wir 
                 Ihr Business auf das nächste Level.
               </p>
@@ -119,17 +134,14 @@ export default function Home() {
           <BentoGrid />
         </Section>
 
-        {/* Spacer für Premium-Gefühl */}
-        <div className="h-64" />
-
         {/* Kontaktformular */}
-        <Section id="kontakt" variant="default" className="py-48 bg-white">
+        <Section id="kontakt" variant="default" className="py-24 lg:py-32 bg-white dark:bg-[#0a0a0a] transition-colors duration-300">
           <ParallaxSection speed={0.2}>
             <div className="text-center mb-24 space-y-6">
-              <h2 className="text-5xl md:text-7xl font-light tracking-tighter text-[#1a1a1a]">
+              <h2 className="text-5xl md:text-7xl font-light tracking-tighter text-[#1a1a1a] dark:text-white transition-colors duration-300">
                 Lassen Sie uns <span className="text-[#00CED1]">sprechen</span>
               </h2>
-              <p className="text-xl md:text-2xl font-light text-[#4a4a4a] max-w-2xl mx-auto">
+              <p className="text-xl md:text-2xl font-light text-[#4a4a4a] dark:text-gray-300 max-w-2xl mx-auto transition-colors duration-300">
                 Erzählen Sie mir von Ihrem Projekt. Ich melde mich innerhalb von 24 Stunden.
               </p>
             </div>
@@ -146,26 +158,36 @@ export default function Home() {
           </div>
         </Section>
 
-        {/* Spacer */}
-        <div className="h-64" />
+        {/* Testimonials - Dark Mode */}
+        <Section id="testimonials" variant="default" className="py-32 bg-[#0a0a0a]">
+          <ParallaxSection speed={0.2}>
+            <div className="text-center mb-16 space-y-6 px-4">
+              <h2 className="text-4xl md:text-6xl font-light tracking-tighter text-white">
+                Das sagen unsere <span className="text-[#00CED1]">Kunden</span>
+              </h2>
+              <p className="text-lg md:text-xl font-light text-gray-400 max-w-2xl mx-auto">
+                Echte Ergebnisse für echte Unternehmen. Überzeugen Sie sich selbst.
+              </p>
+            </div>
+          </ParallaxSection>
+          
+          <Testimonials />
+        </Section>
 
         {/* Call-to-Action */}
-        <Section id="cta" variant="default" className="py-48 bg-[#f5f5f5]">
+        <Section id="cta" variant="default" className="py-24 lg:py-32 bg-[#f5f5f5] dark:bg-[#111111] transition-colors duration-300">
           <CTASection />
         </Section>
 
-        {/* Spacer */}
-        <div className="h-64" />
-
         {/* FAQ */}
-        <Section id="faq" variant="default" className="py-48 bg-white">
+        <Section id="faq" variant="default" className="py-24 lg:py-32 bg-white dark:bg-[#0a0a0a] transition-colors duration-300">
           <div className="max-w-4xl mx-auto">
             <ParallaxSection speed={0.2}>
               <div className="text-center mb-24 space-y-6">
-                <h2 className="text-5xl md:text-7xl font-light tracking-tighter text-[#1a1a1a]">
+                <h2 className="text-5xl md:text-7xl font-light tracking-tighter text-[#1a1a1a] dark:text-white transition-colors duration-300">
                   <span className="text-[#00CED1]">Häufige</span> Fragen
                 </h2>
-                <p className="text-xl md:text-2xl font-light text-[#4a4a4a]">
+                <p className="text-xl md:text-2xl font-light text-[#4a4a4a] dark:text-gray-300 transition-colors duration-300">
                   Alles, was Sie über unsere Arbeitsweise wissen müssen.
                 </p>
               </div>
@@ -175,8 +197,6 @@ export default function Home() {
           </div>
         </Section>
 
-        {/* Spacer vor Footer */}
-        <div className="h-64" />
       </main>
       
       <Footer />

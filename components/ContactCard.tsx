@@ -27,19 +27,19 @@ export default function ContactCard() {
     {
       icon: MapPin,
       label: "Standort",
-      value: "Berlin, Deutschland",
+      value: "Balingen, Baden-Württemberg",
       href: null,
     },
   ];
 
   return (
-    <GlassCard className="p-8 h-full bg-white border border-gray-200" hover={false}>
+    <GlassCard className="p-8 h-full bg-white dark:bg-[#111111] border border-gray-200 dark:border-gray-800 transition-colors duration-300" hover={false}>
       <div className="space-y-8">
         <div>
-          <h3 className="text-2xl font-bold text-[#1a1a1a] mb-2">
+          <h3 className="text-2xl font-bold text-[#1a1a1a] dark:text-white mb-2 transition-colors duration-300">
             Direkter Kontakt
           </h3>
-          <p className="text-[#4a4a4a]">
+          <p className="text-[#4a4a4a] dark:text-gray-300 transition-colors duration-300">
             Lassen Sie uns über Ihr Projekt sprechen
           </p>
         </div>
@@ -53,10 +53,10 @@ export default function ContactCard() {
                   <Icon className="w-6 h-6 text-[#00CED1]" />
                 </div>
                 <div className="flex-1">
-                  <div className="text-sm text-[#6a6a6a] mb-1">
+                  <div className="text-sm text-[#6a6a6a] dark:text-gray-400 mb-1 transition-colors duration-300">
                     {detail.label}
                   </div>
-                  <div className="text-[#1a1a1a] font-medium group-hover:text-[#00CED1] transition-colors">
+                  <div className="text-[#1a1a1a] dark:text-gray-200 font-medium group-hover:text-[#00CED1] dark:group-hover:text-[#00CED1] transition-colors duration-300">
                     {detail.value}
                   </div>
                 </div>
@@ -81,8 +81,8 @@ export default function ContactCard() {
           })}
         </div>
 
-        <div className="pt-6 border-t border-gray-200">
-          <p className="text-sm text-[#6a6a6a] leading-relaxed">
+        <div className="pt-6 border-t border-gray-200 dark:border-gray-800 transition-colors duration-300">
+          <p className="text-sm text-[#6a6a6a] dark:text-gray-400 leading-relaxed transition-colors duration-300">
             ⚡ Antwortzeit: Innerhalb von 24 Stunden
             <br />
             🎯 Kostenlose Erstberatung verfügbar

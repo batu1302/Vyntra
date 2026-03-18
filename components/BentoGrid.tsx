@@ -74,17 +74,17 @@ function BentoCard({
       }}
       className={className}
     >
-      <div className="relative group h-full rounded-3xl bg-white border border-gray-200 p-10 hover:border-[#00CED1]/50 transition-all duration-500 hover:shadow-md">
+      <div className="relative group h-full rounded-3xl bg-white dark:bg-[#111111] border border-gray-200 dark:border-gray-800 p-10 hover:border-[#00CED1]/50 dark:hover:border-[#00CED1]/50 transition-all duration-500 hover:shadow-md">
         <div className="relative z-10 h-full flex flex-col">
           {variant === "default" ? (
             <>
               <div className="mb-6 p-3 rounded-xl bg-[#00CED1]/10 w-fit group-hover:scale-110 transition-transform duration-300">
                 {icon}
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-[#1a1a1a]">
+              <h3 className="text-2xl font-bold mb-4 text-[#1a1a1a] dark:text-white">
                 {title}
               </h3>
-              <p className="text-[#4a4a4a] leading-relaxed">
+              <p className="text-[#4a4a4a] dark:text-gray-300 leading-relaxed">
                 {description}
               </p>
             </>
@@ -97,8 +97,8 @@ function BentoCard({
                 <div className="text-6xl font-bold text-[#00CED1] mb-2">
                   {statValue}
                 </div>
-                <div className="text-lg font-semibold text-[#1a1a1a] mb-2">{title}</div>
-                <div className="text-sm text-[#6a6a6a]">{statLabel}</div>
+                <div className="text-lg font-semibold text-[#1a1a1a] dark:text-white mb-2">{title}</div>
+                <div className="text-sm text-[#6a6a6a] dark:text-gray-400">{statLabel}</div>
               </div>
             </>
           )}
