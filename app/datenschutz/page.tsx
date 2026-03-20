@@ -6,7 +6,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 
 export const metadata: Metadata = {
   title: "Datenschutzerklärung",
-  description: "Datenschutzerklärung von Vyntra gemäß DSGVO.",
+  description: "Datenschutzerklärung von Vyntrax gemäß DSGVO.",
 };
 
 export default function DatenschutzPage() {
@@ -73,8 +73,18 @@ export default function DatenschutzPage() {
                 <div>
                   <h2 className="text-2xl font-bold text-[#1a1a1a] dark:text-white mb-4 transition-colors duration-300">2. Hosting</h2>
                   <p>
-                    Diese Website wird bei einem externen Dienstleister gehostet (Hoster). Die
-                    personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf den
+                    Diese Website wird gehostet von:
+                    <br /><br />
+                    <strong>STRATO AG</strong>
+                    <br />
+                    Pascalstraße 10
+                    <br />
+                    10587 Berlin
+                    <br />
+                    Deutschland
+                  </p>
+                  <p className="mt-4">
+                    Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf den
                     Servern des Hosters gespeichert. Hierbei kann es sich v. a. um IP-Adressen,
                     Kontaktanfragen, Meta- und Kommunikationsdaten, Vertragsdaten, Kontaktdaten,
                     Namen, Websitezugriffe und sonstige Daten, die über eine Website generiert werden,
@@ -85,6 +95,17 @@ export default function DatenschutzPage() {
                     potenziellen und bestehenden Kunden (Art. 6 Abs. 1 lit. b DSGVO) und im Interesse
                     einer sicheren, schnellen und effizienten Bereitstellung unseres Online-Angebots
                     durch einen professionellen Anbieter (Art. 6 Abs. 1 lit. f DSGVO).
+                  </p>
+                  <p className="mt-4">
+                    Weitere Informationen finden Sie in der Datenschutzerklärung von STRATO:{" "}
+                    <a
+                      href="https://www.strato.de/datenschutz/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#00CED1] hover:text-[#00A8AB] transition-colors"
+                    >
+                      https://www.strato.de/datenschutz/
+                    </a>
                   </p>
                 </div>
 
@@ -109,15 +130,15 @@ export default function DatenschutzPage() {
                     <br /><br />
                     Batuhan Yomralioglu
                     <br />
-                    Vyntra – Webdesign & Entwicklung
+                    Vyntrax – Webdesign & Entwicklung
                     <br />
                     Balingen
                     <br />
                     Deutschland
                     <br /><br />
                     E-Mail:{" "}
-                    <a href="mailto:batuhanbthn@hotmail.com" className="text-[#00CED1] hover:text-[#00A8AB] transition-colors">
-                      batuhanbthn@hotmail.com
+                    <a href="mailto:info@vyntrax.de" className="text-[#00CED1] hover:text-[#00A8AB] transition-colors">
+                      info@vyntrax.de
                     </a>
                     <br />
                     Telefon:{" "}
@@ -221,6 +242,13 @@ export default function DatenschutzPage() {
                     >
                       https://formspree.io/legal/privacy-policy
                     </a>.
+                  </p>
+                  <p className="mt-4">
+                    <strong>Hinweis zur Datenübermittlung in die USA:</strong> Formspree, Inc. hat
+                    seinen Sitz in den USA. Die Datenübermittlung in die USA erfolgt auf Grundlage
+                    des EU-US Data Privacy Framework (DPF). Soweit kein angemessenes
+                    Datenschutzniveau besteht, basiert die Übermittlung auf
+                    EU-Standardvertragsklauseln gemäß Art. 46 Abs. 2 lit. c DSGVO.
                   </p>
                   <p className="mt-4">
                     Die von Ihnen im Kontaktformular eingegebenen Daten verbleiben bei uns, bis Sie uns

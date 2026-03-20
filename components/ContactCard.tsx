@@ -15,8 +15,8 @@ export default function ContactCard() {
     {
       icon: Mail,
       label: "E-Mail",
-      value: "batuhanbthn@hotmail.com",
-      href: "mailto:batuhanbthn@hotmail.com",
+      value: "info@vyntrax.de",
+      href: "mailto:info@vyntrax.de",
     },
     {
       icon: Phone,

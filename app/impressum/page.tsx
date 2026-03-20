@@ -6,7 +6,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 
 export const metadata: Metadata = {
   title: "Impressum",
-  description: "Impressum und rechtliche Angaben von Vyntra.",
+  description: "Impressum und rechtliche Angaben von Vyntrax.",
 };
 
 export default function ImpressumPage() {
@@ -23,11 +23,15 @@ export default function ImpressumPage() {
             <div className="prose prose-lg max-w-none">
               <div className="space-y-8 text-[#4a4a4a] dark:text-gray-300 leading-relaxed transition-colors duration-300">
                 <div>
-                  <h2 className="text-2xl font-bold text-[#1a1a1a] dark:text-white mb-4 transition-colors duration-300">Angaben gemäß § 5 TMG</h2>
+                  <h2 className="text-2xl font-bold text-[#1a1a1a] dark:text-white mb-4 transition-colors duration-300">Angaben gemäß § 5 DDG</h2>
                   <p>
                     Batuhan Yomralioglu
                     <br />
-                    Balingen
+                    Vyntrax – Webdesign &amp; Entwicklung
+                    <br />
+                    Hirschbergstraße 31
+                    <br />
+                    72336 Balingen
                     <br />
                     Deutschland
                   </p>
@@ -38,10 +42,10 @@ export default function ImpressumPage() {
                   <p>
                     E-Mail:{" "}
                     <a
-                      href="mailto:batuhanbthn@hotmail.com"
+                      href="mailto:info@vyntrax.de"
                       className="text-[#00CED1] hover:text-[#00A8AB] transition-colors"
                     >
-                      batuhanbthn@hotmail.com
+                      info@vyntrax.de
                     </a>
                     <br />
                     Telefon:{" "}
@@ -51,6 +55,35 @@ export default function ImpressumPage() {
                     >
                       +49 151 280 13 700
                     </a>
+                  </p>
+                </div>
+
+                <div>
+                  <h2 className="text-2xl font-bold text-[#1a1a1a] dark:text-white mb-4 transition-colors duration-300">Umsatzsteuer</h2>
+                  <p>
+                    Kleinunternehmer gemäß § 19 UStG. Es wird keine Umsatzsteuer erhoben
+                    und daher auch nicht ausgewiesen.
+                  </p>
+                </div>
+
+                <div>
+                  <h2 className="text-2xl font-bold text-[#1a1a1a] dark:text-white mb-4 transition-colors duration-300">Streitschlichtung</h2>
+                  <p>
+                    Die Europäische Kommission stellt eine Plattform zur
+                    Online-Streitbeilegung (OS) bereit:{" "}
+                    <a
+                      href="https://ec.europa.eu/consumers/odr/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#00CED1] hover:text-[#00A8AB] transition-colors"
+                    >
+                      https://ec.europa.eu/consumers/odr/
+                    </a>
+                  </p>
+                  <p className="mt-4">
+                    Wir sind nicht bereit oder verpflichtet, an
+                    Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle
+                    teilzunehmen.
                   </p>
                 </div>
 

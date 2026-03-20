@@ -26,7 +26,7 @@ export async function POST(request: Request) {
     // E-Mail senden
     const data = await resend.emails.send({
       from: 'Web-Exzellenz <onboarding@resend.dev>', // Resend Test-Adresse
-      to: ['batuhanbthn@hotmail.com'],
+      to: ['info@vyntrax.de'],
       subject: `🚀 Neue Anfrage von ${name} | Web-Exzellenz`,
       html: `
         <!DOCTYPE html>

@@ -5,22 +5,19 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Thomas Müller",
-    role: "Geschäftsführer, TechFlow GmbH",
-    image: "https://i.pravatar.cc/150?u=a042581f4e29026704d",
-    text: "Die Zusammenarbeit war erstklassig. Unsere neue Website ist nicht nur optisch ein Meisterwerk, sondern hat durch die extrem schnelle Ladezeit auch unsere Conversion-Rate um 40% gesteigert.",
+    name: "T. M.",
+    role: "Geschäftsführer, IT-Unternehmen",
+    text: "Die Zusammenarbeit war erstklassig. Unsere neue Website ist nicht nur optisch ein Meisterwerk, sondern hat auch unsere Conversion-Rate deutlich gesteigert.",
   },
   {
-    name: "Sarah Schmidt",
-    role: "Gründerin, DesignStudio",
-    image: "https://i.pravatar.cc/150?u=a042581f4e29026704b",
+    name: "S. S.",
+    role: "Gründerin, Designagentur",
     text: "Endlich eine Agentur, die nicht nur schöne Designs liefert, sondern auch messbare Ergebnisse. Der Prozess war transparent und das Ergebnis hat unsere Erwartungen übertroffen.",
   },
   {
-    name: "Lukas Weber",
-    role: "Marketingleiter, E-Com Solutions",
-    image: "https://i.pravatar.cc/150?u=a042581f4e29026704c",
-    text: "Von der ersten Beratung bis zum Launch lief alles reibungslos. Besonders die psychologische Ausrichtung der Texte und des Designs hat sich sofort in höheren Verkaufszahlen widergespiegelt.",
+    name: "L. W.",
+    role: "Marketingleiter, E-Commerce",
+    text: "Von der ersten Beratung bis zum Launch lief alles reibungslos. Das Design hat sich direkt positiv auf unsere Verkaufszahlen ausgewirkt.",
   }
 ];
 

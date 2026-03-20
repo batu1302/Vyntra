@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 import Logo from "@/components/Logo";
 
 export default function Footer() {
@@ -34,17 +34,12 @@ export default function Footer() {
   };
 
   const contactInfo = [
-    { icon: Mail, label: "batuhanbthn@hotmail.com", href: "mailto:batuhanbthn@hotmail.com" },
+    { icon: Mail, label: "info@vyntrax.de", href: "mailto:info@vyntrax.de" },
     { icon: Phone, label: "+49 151 280 13 700", href: "tel:+4915128013700" },
     { icon: MapPin, label: "Balingen, Baden-Württemberg, Deutschland" },
   ];
 
-  const socialLinks = [
-    { icon: Facebook, href: "#", label: "Facebook" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-  ];
+  const socialLinks: { icon: React.ElementType; href: string; label: string }[] = [];
 
   return (
     <footer className="bg-gray-50 dark:bg-black text-gray-600 dark:text-gray-400 border-t border-gray-200 dark:border-[#1a1a1a] transition-colors duration-300">
@@ -167,22 +162,23 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Social Links */}
-            <div className="flex space-x-4">
-              {socialLinks.map((social) => {
-                const Icon = social.icon;
-                return (
-                  <a
-                    key={social.label}
-                    href={social.href}
-                    aria-label={social.label}
-                    className="p-2 rounded-full bg-gray-200 dark:bg-[#1a1a1a] hover:bg-[#00CED1] dark:hover:bg-[#00CED1] text-gray-600 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors duration-200"
-                  >
-                    <Icon className="w-5 h-5" />
-                  </a>
-                );
-              })}
-            </div>
+            {socialLinks.length > 0 && (
+              <div className="flex space-x-4">
+                {socialLinks.map((social) => {
+                  const Icon = social.icon;
+                  return (
+                    <a
+                      key={social.label}
+                      href={social.href}
+                      aria-label={social.label}
+                      className="p-2 rounded-full bg-gray-200 dark:bg-[#1a1a1a] hover:bg-[#00CED1] dark:hover:bg-[#00CED1] text-gray-600 dark:text-gray-400 hover:text-white dark:hover:text-white transition-colors duration-200"
+                    >
+                      <Icon className="w-5 h-5" />
+                    </a>
+                  );
+                })}
+              </div>
+            )}
           </div>
         </div>
       </div>

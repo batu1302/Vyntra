@@ -14,13 +14,13 @@ const geistSans = Geist({
 });
 
 // Base URL - sollte in Production durch Umgebungsvariable ersetzt werden
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://vyntra.de";
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://vyntrax.de";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: "Vyntra - Moderne Web-Lösungen",
-    template: "%s | Vyntra",
+    default: "Vyntrax - Moderne Web-Lösungen",
+    template: "%s | Vyntrax",
   },
   description:
     "Professionelles Webdesign und Webentwicklung für Ihr Unternehmen. High-Performance Websites, die nicht nur beeindrucken, sondern messbare Ergebnisse liefern.",
@@ -34,9 +34,9 @@ export const metadata: Metadata = {
     "Digitale Lösungen",
     "Web-Agentur",
   ],
-  authors: [{ name: "Vyntra" }],
-  creator: "Vyntra",
-  publisher: "Vyntra",
+  authors: [{ name: "Vyntrax" }],
+  creator: "Vyntrax",
+  publisher: "Vyntrax",
   formatDetection: {
     email: false,
     address: false,
@@ -57,29 +57,23 @@ export const metadata: Metadata = {
     type: "website",
     locale: "de_DE",
     url: baseUrl,
-    siteName: "Vyntra",
-    title: "Vyntra - Moderne Web-Lösungen",
+    siteName: "Vyntrax",
+    title: "Vyntrax - Moderne Web-Lösungen",
     description:
       "Professionelles Webdesign und Webentwicklung für Ihr Unternehmen. High-Performance Websites, die nicht nur beeindrucken, sondern messbare Ergebnisse liefern.",
-    images: [
-      {
-        url: `${baseUrl}/og-image.jpg`,
-        width: 1200,
-        height: 630,
-        alt: "Vyntra - Moderne Web-Lösungen",
-      },
-    ],
   },
   twitter: {
-    card: "summary_large_image",
-    title: "Vyntra - Moderne Web-Lösungen",
+    card: "summary",
+    title: "Vyntrax - Moderne Web-Lösungen",
     description:
       "Professionelles Webdesign und Webentwicklung für Ihr Unternehmen.",
-    images: [`${baseUrl}/og-image.jpg`],
-    creator: "@vyntra",
   },
   alternates: {
     canonical: baseUrl,
+  },
+  icons: {
+    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
+    apple: [{ url: "/vyntrax-v.png", sizes: "512x512" }],
   },
   verification: {
     // Google Search Console
@@ -108,15 +102,15 @@ export const viewport: Viewport = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "Vyntra",
+  name: "Vyntrax",
   description:
     "Professionelles Webdesign und Webentwicklung für Ihr Unternehmen",
   url: baseUrl,
-  logo: `${baseUrl}/logo.png`,
+  logo: `${baseUrl}/favicon.svg`,
   sameAs: [
     // Social Media Links hier einfügen
-    // "https://www.facebook.com/vyntra",
-    // "https://www.linkedin.com/company/vyntra",
+    // "https://www.facebook.com/vyntrax",
+    // "https://www.linkedin.com/company/vyntrax",
   ],
   contactPoint: {
     "@type": "ContactPoint",
@@ -144,10 +138,6 @@ export default function RootLayout({
         />
         {/* DNS Prefetch für externe Ressourcen */}
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-        {/* Favicon */}
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
         {/* Structured Data */}
         <script

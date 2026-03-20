@@ -111,12 +111,13 @@ export default function Home() {
                 <span className="text-move-effect group flex items-center">
                   <span className="text-[#00CED1] group-hover:text-[#20E0E3] transition-colors duration-300">Lösungen</span>
                   <span className="whitespace-pre">, die </span>
-                  <span className="inline-flex">
+                  <span className="inline-flex" aria-label="bewegen" role="text">
                     {'bewegen'.split('').map((char, i, arr) => (
                       <span
                         key={i}
                         className="letter-wave group-hover:text-[#20E0E3] transition-colors duration-300"
                         style={{ animationDelay: `${(arr.length - 1 - i) * 0.2}s` }}
+                        aria-hidden="true"
                       >
                         {char}
                       </span>

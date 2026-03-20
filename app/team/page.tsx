@@ -54,7 +54,7 @@ export default function TeamPage() {
                     Lead Developer & Gründer
                   </p>
                   <p className="text-lg text-[#4a4a4a] dark:text-gray-300 leading-relaxed mb-6 transition-colors duration-300">
-                    Mit 24 Jahren ist Batuhan der Visionär hinter Vyntra. Seine Leidenschaft für
+                    Mit 24 Jahren ist Batuhan der Visionär hinter Vyntrax. Seine Leidenschaft für
                     digitale Exzellenz und sein unermüdlicher Einsatz für Perfektion treiben jedes
                     Projekt voran.
                   </p>

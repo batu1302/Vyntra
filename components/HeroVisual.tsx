@@ -7,7 +7,7 @@ const SNIPPETS = [
   {
     filename: "page.tsx",
     code: [
-      { indent: 0, tokens: [{ c: "#c678dd", t: "import" }, { c: "#e5c07b", t: " { WebApp, Success }" }, { c: "#c678dd", t: " from" }, { c: "#98c379", t: " '@vyntra/core'" }, { c: "#6c7986", t: ";" }] },
+      { indent: 0, tokens: [{ c: "#c678dd", t: "import" }, { c: "#e5c07b", t: " { WebApp, Success }" }, { c: "#c678dd", t: " from" }, { c: "#98c379", t: " '@vyntrax/core'" }, { c: "#6c7986", t: ";" }] },
       { indent: 0, tokens: [] },
       { indent: 0, tokens: [{ c: "#c678dd", t: "const" }, { c: "#61afef", t: " buildProject" }, { c: "#56b6c2", t: " =" }, { c: "#c678dd", t: " async" }, { c: "#abb2bf", t: " () =>" }, { c: "#e5c07b", t: " {" }] },
       { indent: 1, tokens: [{ c: "#c678dd", t: "const" }, { c: "#e06c75", t: " score" }, { c: "#56b6c2", t: " =" }, { c: "#c678dd", t: " await" }, { c: "#61afef", t: " optimize" }, { c: "#abb2bf", t: "()" }, { c: "#6c7986", t: ";" }] },
@@ -37,7 +37,7 @@ const SNIPPETS = [
       { indent: 0, tokens: [] },
       { indent: 0, tokens: [{ c: "#c678dd", t: "export function" }, { c: "#61afef", t: " useSEO" }, { c: "#abb2bf", t: "(title: string)" }, { c: "#e5c07b", t: " {" }] },
       { indent: 1, tokens: [{ c: "#61afef", t: "useEffect" }, { c: "#abb2bf", t: "(() => {" }] },
-      { indent: 2, tokens: [{ c: "#abb2bf", t: "document.title = " }, { c: "#98c379", t: "`${title} | Vyntra`" }, { c: "#6c7986", t: ";" }] },
+      { indent: 2, tokens: [{ c: "#abb2bf", t: "document.title = " }, { c: "#98c379", t: "`${title} | Vyntrax`" }, { c: "#6c7986", t: ";" }] },
       { indent: 1, tokens: [{ c: "#abb2bf", t: "}, [title]);" }] },
       { indent: 0, tokens: [{ c: "#e5c07b", t: "}" }] },
     ],

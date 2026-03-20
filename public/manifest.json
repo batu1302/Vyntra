@@ -1,17 +1,24 @@
 {
-  "name": "Vyntra - Moderne Web-Lösungen",
-  "short_name": "Vyntra",
+  "name": "Vyntrax - Moderne Web-Lösungen",
+  "short_name": "Vyntrax",
   "description": "Professionelles Webdesign und Webentwicklung für Ihr Unternehmen",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#4f46e5",
+  "theme_color": "#00CED1",
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/favicon.ico",
+      "src": "/vyntrax-v.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.svg",
       "sizes": "any",
-      "type": "image/x-icon"
+      "type": "image/svg+xml",
+      "purpose": "any"
     }
   ]
 }

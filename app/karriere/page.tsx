@@ -6,7 +6,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import { Mail } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Karriere - Stellenangebote bei Vyntra",
+  title: "Karriere - Stellenangebote bei Vyntrax",
   description: "Aktuell suchen wir aktiv keine neuen Mitarbeiter. Initiativbewerbungen von starken Talenten sind dennoch jederzeit willkommen.",
 };
 
@@ -37,10 +37,10 @@ export default function KarrierePage() {
                 <div className="flex items-center justify-center gap-3 mb-4">
                   <Mail className="w-6 h-6 text-[#00CED1]" />
                   <a
-                    href="mailto:batuhanbthn@hotmail.com"
+                    href="mailto:info@vyntrax.de"
                     className="text-xl font-semibold text-[#00CED1] hover:text-[#00A8AB] transition-colors"
                   >
-                    batuhanbthn@hotmail.com
+                    info@vyntrax.de
                   </a>
                 </div>
                 <p className="text-[#6a6a6a] dark:text-gray-400 transition-colors duration-300">

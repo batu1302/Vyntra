@@ -6,7 +6,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 
 export const metadata: Metadata = {
   title: "Allgemeine Geschäftsbedingungen",
-  description: "Allgemeine Geschäftsbedingungen (AGB) von Vyntra.",
+  description: "Allgemeine Geschäftsbedingungen (AGB) von Vyntrax.",
 };
 
 export default function AGBPage() {
@@ -26,7 +26,7 @@ export default function AGBPage() {
                   <h2 className="text-2xl font-bold text-[#1a1a1a] dark:text-white mb-4 transition-colors duration-300">1. Geltungsbereich</h2>
                   <p>
                     Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Leistungen der
-                    Vyntra, erbracht durch Batuhan Yomralioglu, gegenüber dem Auftraggeber
+                    Vyntrax, erbracht durch Batuhan Yomralioglu, gegenüber dem Auftraggeber
                     (nachfolgend „Kunde"). Abweichende, entgegenstehende oder ergänzende AGB des
                     Kunden werden nicht Vertragsbestandteil, es sei denn, ihrer Geltung wird
                     ausdrücklich schriftlich zugestimmt.
@@ -183,6 +183,27 @@ export default function AGBPage() {
                   <p className="mt-4">
                     Änderungen und Ergänzungen dieser AGB bedürfen der Schriftform. Dies gilt auch
                     für die Aufhebung dieses Schriftformerfordernisses.
+                  </p>
+                </div>
+
+                <div>
+                  <h2 className="text-2xl font-bold text-[#1a1a1a] dark:text-white mb-4 transition-colors duration-300">13. Online-Streitbeilegung</h2>
+                  <p>
+                    Die Europäische Kommission stellt eine Plattform zur
+                    Online-Streitbeilegung (OS) bereit:{" "}
+                    <a
+                      href="https://ec.europa.eu/consumers/odr/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#00CED1] hover:text-[#00A8AB] transition-colors"
+                    >
+                      https://ec.europa.eu/consumers/odr/
+                    </a>
+                  </p>
+                  <p className="mt-4">
+                    Wir sind nicht bereit oder verpflichtet, an
+                    Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle
+                    teilzunehmen.
                   </p>
                 </div>
 
